@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Logotipos IA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Garante que padding e border estejam dentro da largura total */
+        }
+        textarea {
+            resize: vertical;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .checkbox-group label {
+            font-weight: normal;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>✨ Gerador de Logotipos por IA</h2>
+        <form id="logo-generator-form">
+            
+            <label for="nome">Nome da Empresa:</label>
+            <input type="text" id="nome" name="nome" placeholder="Ex: Café Aurora" required>
+
+            <label for="area">Área de Atuação e Detalhes (O que ela faz?):</label>
+            <textarea id="area" name="area" rows="4" placeholder="Ex: Cafeteria de bairro especializada em grãos orgânicos de pequenos produtores, com ambiente rústico." required></textarea>
+            
+            <label>Estilo Desejado:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="minimalista" name="estilo" value="Minimalista">
+                <label for="minimalista">Minimalista</label>
+                
+                <input type="checkbox" id="geometrico" name="estilo" value="Geométrico">
+                <label for="geometrico">Geométrico</label>
+
+                <input type="checkbox" id="classico" name="estilo" value="Clássico/Premium">
+                <label for="classico">Clássico/Premium</label>
+                
+                <input type="checkbox" id="handdrawn" name="estilo" value="Mão Livre (Hand-Drawn)">
+                <label for="handdrawn">Mão Livre (Hand-Drawn)</label>
+
+                <input type="checkbox" id="moderno" name="estilo" value="Moderno">
+                <label for="moderno">Moderno</label>
+            </div>
+
+            <label for="cores">Cores Chave (Opcional):</label>
+            <input type="text" id="cores" name="cores" placeholder="Ex: Marrom, Creme e Toque de Verde Oliva">
+
+            <button type="submit">Gerar Opções de Logotipo</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('logo-generator-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Formulário enviado! (Em um aplicativo real, os dados seriam processados pelo Backend/IA agora)');
+            
+            // Aqui você adicionaria o código JavaScript para:
+            // 1. Coletar todos os valores (nome, área, estilos, cores).
+            // 2. Enviar esses dados para a sua função Python/Backend.
+            // 3. Receber as imagens de logotipo geradas pela IA.
+            // 4. Exibir as imagens ao usuário.
+        });
+    </script>
+</body>
+</html>
